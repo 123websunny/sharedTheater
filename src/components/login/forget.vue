@@ -6,7 +6,7 @@
 		  </router-link>
 		</mt-header>
 		<div class="content">
-			<div class="top">登录</div>
+			<div class="top">注册</div>
 			<div>
 				<img src="../../../static/img/logo.png" class="logo" />
 			</div>
@@ -21,21 +21,27 @@
 				</el-row>
 				<el-row>
 					<el-col :span="4">
+						<img class="licon" src="../../../static/img/yanzheng.png" />
+					</el-col>
+					<el-col :span="20">
+						<mt-field placeholder="验证码">
+							<mt-button class="btn">重新获取</mt-button>
+						</mt-field>	
+					</el-col>
+				</el-row>
+				<el-row>
+					<el-col :span="4">
 						<img class="licon" src="../../../static/img/suo.png" />
 					</el-col>
 					<el-col :span="16">
-						<mt-field placeholder="请输入密码"></mt-field>
+						<mt-field type="password" placeholder="设置登录密码"></mt-field>
 					</el-col>
 					<el-col :span="4">
 							<img class="closeIcon" src="../../../static/img/biyan.png" />
 					</el-col>
 				</el-row>
 				<div class="register-button">
-					<mt-button  @click="login">登  录</mt-button>
-				</div>
-				<div class="text-left">
-					<span class="lf"><router-link to="/forget">忘记密码</router-link></span>
-					<span class="rt">没有账号，<router-link to="/register">立即注册</router-link></span>
+					<mt-button  @click="login">确  认</mt-button>
 				</div>
 			</div>
 			<div class="footer">
@@ -61,7 +67,7 @@
 		methods: {
 			//登录验证
 			login() {
-				this.$router.push({ path: "/mine" });
+				this.$router.push({ path: "/done" });
 			},
 			
 		}
@@ -109,14 +115,14 @@
 	.mint-cell-wrapper{
 		padding:0;
 	}
+	.mint-field-core{
+		font-size:14px;
+	}
 	.licon{
 		margin-top:12px;
 	}
 	.closeIcon{
 		margin-top:20px;
-	}
-	.mint-field-core{
-		font-size:14px;
 	}
 	.btn{
 		border:0;
@@ -135,13 +141,15 @@
 		background-color:#ff931f; 
 		
 	}
+	.mint-button--default{
+		box-shadow:none;
+	}
 	.text-left{
 		width:100%;
 		font-size:14px;
 		margin-top:10px;
+		text-align:right;
 	}
-	.lf{float:left;}
-	.rt{float:right;}
 	.text-left a{
 		color:#FF931F;
 		text-decoration:none;
@@ -155,6 +163,5 @@
 		color:#8f8f8f;
 		font-size:14px;
 	}
-
 	
 </style>

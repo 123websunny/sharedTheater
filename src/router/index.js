@@ -10,12 +10,40 @@ export default new Router({
 			component: resolve => require(['@/components/start'], resolve),
 		},
 		{
+			path: '/views',
+			component: resolve => require(['@/components/views'], resolve),
+		},
+		{
 			path: '/register',
 			component: resolve => require(['@/components/login/register'], resolve),
 		},
 		{
 			path: '/login',
 			component: resolve => require(['@/components/login/login'], resolve),
+		},
+		{
+			path: '/forget',
+			component: resolve => require(['@/components/login/forget'], resolve),
+		},
+		{
+			path: '/done',
+			component: resolve => require(['@/components/login/done'], resolve),
+		},
+		{
+			path: '/mine',
+			component: resolve => require(['@/components/mine/mine'], resolve),
+		},
+		{
+			path: '/notLogin',
+			component: resolve => require(['@/components/mine/notLogin'], resolve),
+		},
+		{
+			path: '/scanCode',
+			component: resolve => require(['@/components/open/scanCode'], resolve),
+		},
+		{
+			path: '/nearby',
+			component: resolve => require(['@/components/open/nearby'], resolve),
 		},
   ]
 })

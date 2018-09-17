@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div  style="width: 100%;height: 100%;margin: 0;padding: 0;background-color: #fff; overflow: hidden;">
 		<mt-header  class="header">
 		  <router-link to="/" slot="left">
 		    <mt-button  icon="back"></mt-button>
@@ -16,18 +16,17 @@
 						<img class="licon" src="../../../static/img/phone.png" />
 					</el-col>
 					<el-col :span="20">
-						<mt-field placeholder="手机号"></mt-field>
+						<mt-field type="tel" placeholder="手机号"></mt-field>
 					</el-col>
 				</el-row>
 				<el-row>
 					<el-col :span="4">
 						<img class="licon" src="../../../static/img/yanzheng.png" />
 					</el-col>
-					<el-col :span="12">
-						<mt-field placeholder="验证码"></mt-field>	
-					</el-col>
-					<el-col :span="8">
-						<mt-button class="btn">获取验证码</mt-button>
+					<el-col :span="20">
+						<mt-field placeholder="验证码">
+							 <mt-button class="btn">获取验证码</mt-button>
+						</mt-field>	
 					</el-col>
 				</el-row>
 				<el-row>
@@ -35,7 +34,7 @@
 						<img class="licon" src="../../../static/img/suo.png" />
 					</el-col>
 					<el-col :span="16">
-						<mt-field placeholder="请输入密码"></mt-field>
+						<mt-field type="password" placeholder="请输入密码"></mt-field>
 					</el-col>
 					<el-col :span="4">
 							<img class="closeIcon" src="../../../static/img/biyan.png" />
@@ -120,6 +119,9 @@
 	.mint-cell-wrapper{
 		padding:0;
 	}
+	.mint-field-core{
+		font-size:14px;
+	}
 	.licon{
 		margin-top:12px;
 	}
@@ -143,8 +145,13 @@
 		background-color:#ff931f; 
 		
 	}
+	.mint-button--default{
+		box-shadow:none;
+	}
 	.text-left{
 		width:100%;
+		font-size:14px;
+		margin-top:10px;
 		text-align:right;
 	}
 	.text-left a{
@@ -156,7 +163,7 @@
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		height: 80px;
+		height: 70px;
 		color:#8f8f8f;
 	}
 	.footer p{
@@ -165,6 +172,9 @@
 	.footer p a{
 		color:#57bc59;
 		text-decoration:none;
+	}
+	.footer div{
+		font-size:15px;
 	}
 	
 </style>
