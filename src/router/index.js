@@ -42,8 +42,20 @@ export default new Router({
 			component: resolve => require(['@/components/open/scanCode'], resolve),
 		},
 		{
+			path: '/openDoor',
+			component: resolve => require(['@/components/open/openDoor'], resolve),
+		},
+		{
 			path: '/nearby',
 			component: resolve => require(['@/components/open/nearby'], resolve),
+		},
+		{
+			path: '/consume',
+			component: resolve => require(['@/components/open/consume'], resolve),
+		},
+		{
+			path: '/search',
+			component: resolve => require(['@/components/open/search'], resolve),
 		},
   ]
 })

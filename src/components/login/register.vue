@@ -81,7 +81,7 @@
 <style>
 	.mint-header{
 		margin:0;
-		background-color:#fff !important;
+		background-color:transparent !important;
 	}
 	.mint-header-button>a{
 		color:#8f8f8f;
